@@ -23,13 +23,12 @@ app.engine(
           day: "numeric",
         });
       },
-      paginateHelper: paginate.createPagination,
       showIndex: (index) => index + 1,
     },
   })
 );
 app.set("view engine", "hbs");
- //Cau hinh de doc du lieu gui len theo phuong thuc post
+//Cau hinh de doc du lieu gui len theo phuong thuc post
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => res.redirect("/users"));
